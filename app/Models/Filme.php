@@ -9,6 +9,10 @@ class Filme extends Model
 {
     use HasFactory;
 
+   
+    protected $fillable = ['name', 'genero_id', 'ano_lancamento', /* outros campos */];
+
+
     public function genero() {
         return $this->belongsToMany(Genero::class);
     }
